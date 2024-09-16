@@ -126,6 +126,37 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
+/* Make these list items stand out */
+.standard-bounce, .deluxe-bounce, .contact-us {
+    background: #f8f9fa; /* Light background color for contrast */
+    border-left: 5px solid #007bff; /* Blue left border for emphasis */
+    padding: 1rem; /* Padding for better spacing */
+    margin-bottom: 1rem; /* Space between items */
+    font-weight: bold; /* Emphasize text */
+}
+
+.standard-bounce {
+    background: #e0f7fa; /* Light blue background */
+    color: #00796b; /* Darker teal text */
+}
+
+.deluxe-bounce {
+    background: #ffe0b2; /* Light orange background */
+    color: #e64a19; /* Darker orange text */
+}
+
+.contact-us {
+    background: #fce4ec; /* Light pink background */
+    color: #c2185b; /* Darker pink text */
+    font-style: italic; /* Italicize to make it distinct */
+}
+
+/* Add hover effect for better interactivity */
+.standard-bounce:hover, .deluxe-bounce:hover, .contact-us:hover {
+    background: #dbe2e8; /* Slightly darker background on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
 
 /* Contact Section */
 #contact {
