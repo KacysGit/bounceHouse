@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -45,7 +55,6 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
-/* Hero Section */
 .hero {
     position: relative;
     text-align: center;
@@ -54,7 +63,7 @@ nav ul li a:hover {
 
 .hero img {
     width: 100%;
-    height: 60vh; /* Adjust height as needed */
+    height: 60vh;
     object-fit: cover;
     filter: brightness(50%);
 }
@@ -69,16 +78,24 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    top: 30%; /* Adjust top value to position the title appropriately */
-    font-size: 3rem;
+    top: 30%;
+    font-size: 3vw; /* Adjust based on your preferred ratio */
     line-height: 1.2;
+    white-space: nowrap; /* Prevents text from wrapping */
+    padding: 0 1rem; /* Optional padding to add some spacing */
 }
+
 
 .hero p {
-    top: 70%; /* Adjust top value to position the subtitle appropriately */
-    font-size: 1.5rem;
+    top: 70%;
+    font-size: 1.5vw;
 }
 
+@media (max-width: 768px) {
+    .hero img {
+        height: 40vh;
+    }
+}
 
 /* Services Section */
 #services {
@@ -107,6 +124,20 @@ nav ul li a:hover {
     margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+    #services {
+        padding: 1rem;
+    }
+
+    #services h2 {
+        font-size: 2rem;
+    }
+
+    #services p {
+        font-size: 1rem;
+    }
+}
+
 /* About Section */
 #about {
     padding: 2rem 1rem;
@@ -124,6 +155,20 @@ nav ul li a:hover {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    #about {
+        padding: 1rem;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
 }
 
 /* Slideshow Container */
@@ -172,43 +217,46 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.589);
 }
 
-/* Make these list items stand out */
+@media (max-width: 768px) {
+    .slideshow-container {
+        max-width: 90%;
+    }
+
+    .prev, .next {
+        font-size: 30px;
+        padding: 12px;
+    }
+}
+
+/* Emphasis Elements */
 .standard-bounce, .deluxe-bounce, .contact-us, .discount {
-    background: #f8f9fa; /* Light background color for contrast */
-    border-left: 5px solid #007bff; /* Blue left border for emphasis */
-    padding: 1rem; /* Padding for better spacing */
-    margin-bottom: 1rem; /* Space between items */
-    font-weight: bold; /* Emphasize text */
+    background: #f8f9fa;
+    border-left: 5px solid #007bff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .standard-bounce {
-    background: #e0f7fa; /* Light blue background */
-    color: #00796b; /* Darker teal text */
+    background: #e0f7fa;
+    color: #00796b;
 }
 
 .deluxe-bounce {
-    background: #ffe0b2; /* Light orange background */
-    color: #e8663e; /* Darker orange text */
+    background: #ffe0b2;
+    color: #e8663e;
 }
 
-.contact-us {
-    background: #fce4ec; /* Light pink background */
-    color: #c2185b; /* Darker pink text */
-    font-style: italic; /* Italicize to make it distinct */
+.contact-us, .discount {
+    background: #f4e4fc;
+    color: #b118c2;
+    font-style: italic;
 }
 
-.discount {
-    background: #f4e4fc; /* Light pink background */
-    color: #b118c2; /* Darker pink text */
-    font-style: italic; /* Italicize to make it distinct */
-}
-
-/* Add hover effect for better interactivity */
 .standard-bounce:hover, .deluxe-bounce:hover, .contact-us:hover, .discount:hover {
-    background: #dbe2e8; /* Slightly darker background on hover */
-    cursor: pointer; /* Change cursor to pointer */
+    background: #dbe2e8;
+    cursor: pointer;
 }
-
 
 /* Contact Section */
 #contact {
@@ -261,6 +309,21 @@ form button:hover {
     background: #0056b3;
 }
 
+@media (max-width: 768px) {
+    form {
+        padding: 1rem;
+    }
+
+    form label {
+        font-size: 1rem;
+    }
+
+    form input, form textarea, form button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
 /* Footer */
 footer {
     background: #007bff;
@@ -274,4 +337,11 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
 }
