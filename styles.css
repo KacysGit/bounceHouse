@@ -250,7 +250,12 @@ nav ul li a:hover {
     color: #e8663e;
 }
 
-.contact-us, .discount {
+.contact-us {
+    background: #fce4ee;
+    color: #c21845;
+    font-style: italic;
+}
+.discount {
     background: #f4e4fc;
     color: #b118c2;
     font-style: italic;
