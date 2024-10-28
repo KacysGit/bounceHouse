@@ -95,6 +95,9 @@ nav ul li a:hover {
     .hero img {
         height: 40vh;
     }
+    .hero p {
+        font-size: 2vw;
+    }
 }
 
 /* Services Section */
