@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jumpin' For Joy Bounce House Rentals offers top-quality bounce houses for your events in the Frisco/Little Elm area. Family-owned and operated.">
-    <meta name="keywords" content="bounce house rentals, family-owned business, Frisco TX, Little Elm TX, event rentals">
+    <meta name="description" content="Frisco's Bounce Kingdom - Bounce House Rentals offers top-quality bounce houses for your events in the Frisco/Little Elm area. Family-owned and operated.">
+    <meta name="keywords" content="bounce house rentals, family-owned business, Frisco TX, Little Elm TX, Dall TX, outdoor activities, event rentals">
     <meta name="author" content="Kacy Metcalf">
     <title>Frisco's Bounce Kingdom - Bounce House Rentals</title>
     <link rel="stylesheet" href="styles.css">
@@ -42,14 +42,33 @@
 
         gtag('config', 'G-WG9N5TRE6M');
     </script>
+    <!-- Google tag (gtag.js) event - delayed navigation helper -->
+    <script>
+        // Helper function to delay opening a URL until a gtag event is sent.
+        // Call it in response to an action that should navigate to a URL.
+        function gtagSendEvent(url) {
+        var callback = function () {
+            if (typeof url === 'string') {
+            window.location = url;
+            }
+        };
+        gtag('event', 'conversion_event_contact', {
+            'event_callback': callback,
+            'event_timeout': 2000,
+            // <event_parameters>
+        });
+        return false;
+        }
+    </script>
+  
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -127,7 +146,8 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
             
-            <button type="submit">Send</button>
+            <button type="submit" onclick="return gtagSendEvent('https://friscosbouncekingdom.netlify.app/')">Send</button>
+
         </form>
     </section>
 
