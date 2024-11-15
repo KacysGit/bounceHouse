@@ -146,7 +146,28 @@
             <input type="email" id="email" name="email" required>
             
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <!-- New optional fields -->
+            <div class="inline-fields">
+                <div>
+                    <label for="rental-date">Date of Rental:</label>
+                    <input type="date" id="rental-date" name="rental-date">
+                </div>
+                <div>
+                    <label for="start-time">Start Time:</label>
+                    <input type="time" id="start-time" name="start-time">
+                </div>
+                <div>
+                    <label for="end-time">End Time:</label>
+                    <input type="time" id="end-time" name="end-time">
+                </div>
+            </div>
+            
+            <label for="location">Address of Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter rental location address">
+
+            
             
             <button type="submit">Send</button>
         </form>

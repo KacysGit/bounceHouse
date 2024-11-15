@@ -353,3 +353,35 @@ footer p {
         font-size: 0.9rem;
     }
 }
+
+
+/* Style for Date, Start Time, and End Time in a Row */
+.datetime-container {
+    display: flex;
+    gap: 1rem; /* Space between elements */
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.datetime-container label,
+.datetime-container input {
+    flex: 1; /* Equal width for each item */
+    min-width: 120px; /* Prevents inputs from shrinking too much */
+}
+
+.inline-fields {
+    display: flex;
+    gap: 1rem; /* Space between the fields */
+    margin-bottom: 1rem;
+}
+
+.inline-fields > div {
+    flex: 1;
+    min-width: 0; /* Prevents fields from stretching too much on smaller screens */
+}
+
+.inline-fields label,
+.inline-fields input {
+    display: block;
+    width: 100%; /* Ensures label and input fill their container */
+}
